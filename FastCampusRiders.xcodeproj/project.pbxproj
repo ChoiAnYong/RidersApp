@@ -12,6 +12,14 @@
 		ADBF332A2B70E5D300807E62 /* PendingOrderListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF33292B70E5D300807E62 /* PendingOrderListDelegate.swift */; };
 		ADBF332C2B70E99200807E62 /* InProgressOrderListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF332B2B70E99200807E62 /* InProgressOrderListDelegate.swift */; };
 		ADBF332E2B70EC1300807E62 /* CompletedOrderListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF332D2B70EC1300807E62 /* CompletedOrderListDelegate.swift */; };
+		ADBF33302B710F9700807E62 /* OrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF332F2B710F9700807E62 /* OrderDetailViewModel.swift */; };
+		ADBF33322B710FB200807E62 /* OrderDetailViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF33312B710FB200807E62 /* OrderDetailViewInteractor.swift */; };
+		ADBF33352B71128400807E62 /* OrderDetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF33342B71128400807E62 /* OrderDetailViewDelegate.swift */; };
+		ADBF33382B7146C700807E62 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF33372B7146C700807E62 /* MapManager.swift */; };
+		ADBF333A2B71488700807E62 /* MapAppleDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF33392B71488700807E62 /* MapAppleDirections.swift */; };
+		ADBF333C2B714A3500807E62 /* MapGoogleDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF333B2B714A3500807E62 /* MapGoogleDirections.swift */; };
+		ADBF333E2B714AB000807E62 /* MapKakaoDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF333D2B714AB000807E62 /* MapKakaoDirections.swift */; };
+		ADBF33402B714AD400807E62 /* MapNaverDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF333F2B714AD400807E62 /* MapNaverDirections.swift */; };
 		C355C4972AD10837002F0705 /* FCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355C4962AD10837002F0705 /* FCConstants.swift */; };
 		FE10192C2AB13F270091C91C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10192B2AB13F270091C91C /* APIController.swift */; };
 		FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1019B32AB2D2940091C91C /* ArrayExtension.swift */; };
@@ -51,6 +59,14 @@
 		ADBF33292B70E5D300807E62 /* PendingOrderListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOrderListDelegate.swift; sourceTree = "<group>"; };
 		ADBF332B2B70E99200807E62 /* InProgressOrderListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressOrderListDelegate.swift; sourceTree = "<group>"; };
 		ADBF332D2B70EC1300807E62 /* CompletedOrderListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedOrderListDelegate.swift; sourceTree = "<group>"; };
+		ADBF332F2B710F9700807E62 /* OrderDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModel.swift; sourceTree = "<group>"; };
+		ADBF33312B710FB200807E62 /* OrderDetailViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewInteractor.swift; sourceTree = "<group>"; };
+		ADBF33342B71128400807E62 /* OrderDetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewDelegate.swift; sourceTree = "<group>"; };
+		ADBF33372B7146C700807E62 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		ADBF33392B71488700807E62 /* MapAppleDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAppleDirections.swift; sourceTree = "<group>"; };
+		ADBF333B2B714A3500807E62 /* MapGoogleDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapGoogleDirections.swift; sourceTree = "<group>"; };
+		ADBF333D2B714AB000807E62 /* MapKakaoDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKakaoDirections.swift; sourceTree = "<group>"; };
+		ADBF333F2B714AD400807E62 /* MapNaverDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNaverDirections.swift; sourceTree = "<group>"; };
 		C355C4962AD10837002F0705 /* FCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstants.swift; sourceTree = "<group>"; };
 		FE10192B2AB13F270091C91C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		FE1019B32AB2D2940091C91C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -105,6 +121,26 @@
 				ADBF332D2B70EC1300807E62 /* CompletedOrderListDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		ADBF33332B71126700807E62 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				ADBF33342B71128400807E62 /* OrderDetailViewDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		ADBF33362B71468800807E62 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				ADBF33372B7146C700807E62 /* MapManager.swift */,
+				ADBF33392B71488700807E62 /* MapAppleDirections.swift */,
+				ADBF333B2B714A3500807E62 /* MapGoogleDirections.swift */,
+				ADBF333D2B714AB000807E62 /* MapKakaoDirections.swift */,
+				ADBF333F2B714AD400807E62 /* MapNaverDirections.swift */,
+			);
+			name = Directions;
 			sourceTree = "<group>";
 		};
 		FE1019752AB144250091C91C /* Frameworks */ = {
@@ -221,8 +257,12 @@
 		FE19AF252AAAC43700FE09A8 /* OrderDetail */ = {
 			isa = PBXGroup;
 			children = (
+				ADBF33362B71468800807E62 /* Directions */,
+				ADBF33332B71126700807E62 /* Delegate */,
 				FE1019EB2ABBD13B0091C91C /* TableViewCell */,
 				FE1019CA2AB3FB370091C91C /* OrderDetailViewController.swift */,
+				ADBF33312B710FB200807E62 /* OrderDetailViewInteractor.swift */,
+				ADBF332F2B710F9700807E62 /* OrderDetailViewModel.swift */,
 			);
 			name = OrderDetail;
 			sourceTree = "<group>";
@@ -339,8 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */,
+				ADBF33322B710FB200807E62 /* OrderDetailViewInteractor.swift in Sources */,
 				FED5A4812AC2C5150050F24D /* OrderCompletionViewController.swift in Sources */,
 				FED5A4772AC26CF40050F24D /* OrderDetailMemoCell.swift in Sources */,
+				ADBF33382B7146C700807E62 /* MapManager.swift in Sources */,
 				FED5A4732AC262C30050F24D /* OrderDetailContactCell.swift in Sources */,
 				FE19AF292AAAC63000FE09A8 /* FCStackView.swift in Sources */,
 				ADBF332E2B70EC1300807E62 /* CompletedOrderListDelegate.swift in Sources */,
@@ -349,8 +391,10 @@
 				FED5A4712AC25FD20050F24D /* OrderDetailTitleCell.swift in Sources */,
 				FED5A47F2AC2BEA80050F24D /* OrderListTableViewCell.swift in Sources */,
 				FE9AD8102ABD4E5300535B47 /* OrderDetailDescriptionCell.swift in Sources */,
+				ADBF333C2B714A3500807E62 /* MapGoogleDirections.swift in Sources */,
 				ADBF33272B70D85A00807E62 /* OrderListViewInteractor.swift in Sources */,
 				FED5A4792AC282A00050F24D /* OrderDetailReceiptCell.swift in Sources */,
+				ADBF333A2B71488700807E62 /* MapAppleDirections.swift in Sources */,
 				FE1019C02AB2E1F00091C91C /* OrderListViewController.swift in Sources */,
 				ADBF33252B70D73300807E62 /* OrderListViewModel.swift in Sources */,
 				FE19AF1A2AA9578E00FE09A8 /* DataManager.swift in Sources */,
@@ -359,16 +403,20 @@
 				FEE5277F2AC6A8FF00BC682F /* PhotoManager.swift in Sources */,
 				FED5A4752AC263F20050F24D /* LocationDetailInfo.swift in Sources */,
 				FE19AF1C2AA9578E00FE09A8 /* LocationManager.swift in Sources */,
+				ADBF33402B714AD400807E62 /* MapNaverDirections.swift in Sources */,
 				FE19AEF82AA6C0EE00FE09A8 /* AppDelegate.swift in Sources */,
 				FE1019CB2AB3FB370091C91C /* OrderDetailViewController.swift in Sources */,
 				FE19AEFA2AA6C0EE00FE09A8 /* SceneDelegate.swift in Sources */,
 				FE19AF2B2AAACD7300FE09A8 /* ButtonExtension.swift in Sources */,
 				FE10192C2AB13F270091C91C /* APIController.swift in Sources */,
+				ADBF333E2B714AB000807E62 /* MapKakaoDirections.swift in Sources */,
 				FE1019C72AB3F63E0091C91C /* ViewExtension.swift in Sources */,
 				ADBF332C2B70E99200807E62 /* InProgressOrderListDelegate.swift in Sources */,
+				ADBF33352B71128400807E62 /* OrderDetailViewDelegate.swift in Sources */,
 				FEE527812AC91DA400BC682F /* OrderTrackingViewController.swift in Sources */,
 				FE19AF202AAABD8100FE09A8 /* OrderDetailInfo.swift in Sources */,
 				FE9AD80F2ABD4E5300535B47 /* OrderDetailMapViewCell.swift in Sources */,
+				ADBF33302B710F9700807E62 /* OrderDetailViewModel.swift in Sources */,
 				ADBF332A2B70E5D300807E62 /* PendingOrderListDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
