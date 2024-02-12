@@ -22,6 +22,8 @@
 		ADBF33402B714AD400807E62 /* MapNaverDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF333F2B714AD400807E62 /* MapNaverDirections.swift */; };
 		ADE8A7462B79DBFA002B950B /* OrderTrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8A7452B79DBFA002B950B /* OrderTrackingViewModel.swift */; };
 		ADE8A7482B79E23C002B950B /* OrderTrackingViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8A7472B79E23C002B950B /* OrderTrackingViewInteractor.swift */; };
+		ADE8A74A2B79EBED002B950B /* OrderCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8A7492B79EBED002B950B /* OrderCompletionViewModel.swift */; };
+		ADE8A74C2B79EC0F002B950B /* OrderCompletionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8A74B2B79EC0F002B950B /* OrderCompletionViewInteractor.swift */; };
 		C355C4972AD10837002F0705 /* FCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355C4962AD10837002F0705 /* FCConstants.swift */; };
 		FE10192C2AB13F270091C91C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10192B2AB13F270091C91C /* APIController.swift */; };
 		FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1019B32AB2D2940091C91C /* ArrayExtension.swift */; };
@@ -71,6 +73,8 @@
 		ADBF333F2B714AD400807E62 /* MapNaverDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNaverDirections.swift; sourceTree = "<group>"; };
 		ADE8A7452B79DBFA002B950B /* OrderTrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingViewModel.swift; sourceTree = "<group>"; };
 		ADE8A7472B79E23C002B950B /* OrderTrackingViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingViewInteractor.swift; sourceTree = "<group>"; };
+		ADE8A7492B79EBED002B950B /* OrderCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewModel.swift; sourceTree = "<group>"; };
+		ADE8A74B2B79EC0F002B950B /* OrderCompletionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewInteractor.swift; sourceTree = "<group>"; };
 		C355C4962AD10837002F0705 /* FCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstants.swift; sourceTree = "<group>"; };
 		FE10192B2AB13F270091C91C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		FE1019B32AB2D2940091C91C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				FED5A4802AC2C5150050F24D /* OrderCompletionViewController.swift */,
+				ADE8A7492B79EBED002B950B /* OrderCompletionViewModel.swift */,
+				ADE8A74B2B79EC0F002B950B /* OrderCompletionViewInteractor.swift */,
 			);
 			name = OrderCompletion;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				FE9AD8142ABD67B900535B47 /* ControlExtension.swift in Sources */,
 				FED5A46F2AC17FD30050F24D /* ItemDetailInfo.swift in Sources */,
 				FED5A4712AC25FD20050F24D /* OrderDetailTitleCell.swift in Sources */,
+				ADE8A74A2B79EBED002B950B /* OrderCompletionViewModel.swift in Sources */,
 				ADE8A7482B79E23C002B950B /* OrderTrackingViewInteractor.swift in Sources */,
 				FED5A47F2AC2BEA80050F24D /* OrderListTableViewCell.swift in Sources */,
 				FE9AD8102ABD4E5300535B47 /* OrderDetailDescriptionCell.swift in Sources */,
@@ -421,6 +428,7 @@
 				FE1019C72AB3F63E0091C91C /* ViewExtension.swift in Sources */,
 				ADBF332C2B70E99200807E62 /* InProgressOrderListDelegate.swift in Sources */,
 				ADBF33352B71128400807E62 /* OrderDetailViewDelegate.swift in Sources */,
+				ADE8A74C2B79EC0F002B950B /* OrderCompletionViewInteractor.swift in Sources */,
 				FEE527812AC91DA400BC682F /* OrderTrackingViewController.swift in Sources */,
 				FE19AF202AAABD8100FE09A8 /* OrderDetailInfo.swift in Sources */,
 				FE9AD80F2ABD4E5300535B47 /* OrderDetailMapViewCell.swift in Sources */,
