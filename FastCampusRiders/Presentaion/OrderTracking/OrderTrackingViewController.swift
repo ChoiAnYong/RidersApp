@@ -38,10 +38,88 @@ class OrderTrackingViewController: UIViewController {
         return UIColor(red: 0.157, green: 0.761, blue: 0.737, alpha: 1)
     }
 
+    private(set) var orderDetailInfo: OrderDetailInfo?
+    
+    private(set) var microBean: MicroBean<OrderTrackingViewController,
+                                          OrderTrackingViewModel, OrderTrackingViewInteractor>?
+    
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        self.microBean = MicroBean(withVC: self,
+                                   viewModel: OrderTrackingViewModel(),
+                                   viewInteractor: OrderTrackingViewInteractor())
+        
         self.startPoint.layer.cornerRadius = 4.5
         self.midPoint.layer.cornerRadius = 4.5
         self.endPoint.layer.cornerRadius = 4.5
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.microBean?.handle(inputMessage: .requestLocationData)
+        
+        guard let orderDetailInfo = self.orderDetailInfo else {
+            assertionFailure("orderDetailInfo is nil")
+            return
+        }
+        
+        let animator = UIViewPropertyAnimator(duration: 1.4, curve: .easeOut)
+        animator.addAnimations {
+            switch orderDetailInfo.status {
+                
+            case .pending:
+                self.setStartStatus()
+            case .delivering:
+                self.setDelivaryStatus()
+            case .completed:
+                self.setCompleteStatus()
+            }
+            self.view.layoutIfNeeded()
+        }
+        animator.startAnimation()
+    }
+}
+
+extension OrderTrackingViewController: ViewControllerConfigurable {
+
+    typealias VM = OrderTrackingViewModel
+
+    typealias I = OrderTrackingInputMessage
+    enum OrderTrackingInputMessage: InputMessage {
+        case requestLocationData
+    }
+
+    typealias O = OrderTrackingOutputMessage
+    enum OrderTrackingOutputMessage: OutputMessage {
+        case updateMapView(locationData: LocationManager.LocationData)
+    }
+}
+
+extension OrderTrackingViewController: ViewContollerInteractable {
+    
+    typealias VI = OrderTrackingViewInteractor
+    
+    typealias IM = OrderTrackingInteractionMessage
+    enum OrderTrackingInteractionMessage: InteractionMessage {
+        case displayLocationOnMapView(mapView: MKMapView, 
+                                      locationData: LocationManager.LocationData)
+    }
+    
+    func convertToInteraction(from outputMessage: OrderTrackingOutputMessage) ->
+    OrderTrackingInteractionMessage {
+        switch outputMessage {
+        case .updateMapView(let locationData):
+            return .displayLocationOnMapView(mapView: self.mapView,
+                                             locationData: locationData)
+        }
+    }
+}
+
+extension OrderTrackingViewController {
+    func set(orderInfo: OrderDetailInfo) {
+        self.orderDetailInfo = orderInfo
     }
 }
 
@@ -58,6 +136,34 @@ extension OrderTrackingViewController {
         self.startLabel.textColor = self.highlightedColor
         self.midLabel.textColor = self.defaultColor
         self.endLabel.textColor = self.defaultColor
+    }
+    
+    private func setDelivaryStatus() {
+        self.indicatorStartConstraint.priority = .defaultLow
+        self.indicatorDelivaryConstraint.priority = .defaultHigh
+        self.indicatorCompletionConstraint.priority = .defaultLow
+
+        self.progressStartConstraint.priority = .defaultLow
+        self.progressDelivaryConstraint.priority = .defaultHigh
+        self.progressCompletionConstraint.priority = .defaultLow
+
+        self.startLabel.textColor = self.highlightedColor
+        self.midLabel.textColor = self.highlightedColor
+        self.endLabel.textColor = self.defaultColor
+    }
+
+    private func setCompleteStatus() {
+        self.indicatorStartConstraint.priority = .defaultLow
+        self.indicatorDelivaryConstraint.priority = .defaultLow
+        self.indicatorCompletionConstraint.priority = .defaultHigh
+
+        self.progressStartConstraint.priority = .defaultLow
+        self.progressDelivaryConstraint.priority = .defaultLow
+        self.progressCompletionConstraint.priority = .defaultHigh
+
+        self.startLabel.textColor = self.highlightedColor
+        self.midLabel.textColor = self.highlightedColor
+        self.endLabel.textColor = self.highlightedColor
     }
 }
 
