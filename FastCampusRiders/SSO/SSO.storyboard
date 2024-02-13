@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-screen-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ki4-XH-Sk1">
+                                <rect key="frame" x="141.66666666666666" y="300" width="110" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="dqz-2c-lHW"/>
+                                    <constraint firstAttribute="height" constant="64" id="qaU-Dl-oU0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDN-1w-7uN">
+                                <rect key="frame" x="46.666666666666657" y="664" width="300" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="kFF-Br-w6i"/>
+                                    <constraint firstAttribute="width" constant="300" id="kxj-8N-JaJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Single Sign On"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-Zl-OoR">
+                                <rect key="frame" x="81.666666666666686" y="464" width="230" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="Dec-M5-MRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOH-cQ-B2e">
+                                <rect key="frame" x="81.666666666666686" y="538" width="230" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zOH-cQ-B2e" firstAttribute="top" secondItem="OPS-Zl-OoR" secondAttribute="bottom" constant="40" id="7BB-AG-Tqb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jDN-1w-7uN" secondAttribute="bottom" constant="115" id="EG8-Zx-e3A"/>
+                            <constraint firstItem="jDN-1w-7uN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HKJ-uy-gCy"/>
+                            <constraint firstItem="ki4-XH-Sk1" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-94" id="YrA-fZ-Up6"/>
+                            <constraint firstItem="OPS-Zl-OoR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fGw-TH-RRV"/>
+                            <constraint firstItem="ki4-XH-Sk1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kSM-oD-zk7"/>
+                            <constraint firstItem="zOH-cQ-B2e" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ktR-uw-OQ6"/>
+                            <constraint firstItem="jDN-1w-7uN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zOH-cQ-B2e" secondAttribute="bottom" constant="30" id="lZL-wL-TOH"/>
+                            <constraint firstItem="OPS-Zl-OoR" firstAttribute="top" secondItem="ki4-XH-Sk1" secondAttribute="bottom" constant="100" id="nqJ-ox-PaM"/>
+                            <constraint firstItem="zOH-cQ-B2e" firstAttribute="width" secondItem="OPS-Zl-OoR" secondAttribute="width" id="s1J-Ks-8UI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login-screen-icon" width="110" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
