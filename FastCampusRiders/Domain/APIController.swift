@@ -33,7 +33,7 @@ extension APIController {
                 return "/order_info_v6"
             case .issueToken(let appID, let secret, let id, let password):
                 print("")
-                return "/issure_token"
+                return "/issue_token"
             case .refreshToken(let appID, let secret, let refreshToken):
                 return "/refresh_token"
             case .readUserInfo(let appID, let secret, let accessToken):
